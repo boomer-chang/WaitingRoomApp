@@ -10,9 +10,9 @@ import {AppConfigService} from '../app-config.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
-  subscriptio2n: Subscription;
+  subscription: Subscription;
   heading: string;
-  description: string;
+  description2: string;
 
   constructor(private router: Router, private appConfigService: AppConfigService) {}
 
