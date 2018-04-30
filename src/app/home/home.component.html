@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <app-splash></app-splash>
+  </div>
+  <div class="row no-gutters">
+    <div class="col col-sm-4 col-xs-4"
+         *ngFor="let videoContainer of appConfigService.getVideoCollections()">
+      <a style="cursor: pointer;"
+          [routerLink]="['../videos', videoContainer.id]"
+          routerLinkActive="active"
+          class="list-group-item clearfix">
+        <div class="overlay">
+          <h4 class="list-group-item-heading">{{ videoContainer.name }}</h4>
+          <p class="list-group-item-text">{{ videoContainer.description }}</p>
+        </div>
+      </a>
+      <!--<div class="view overlay">-->
+        <!--<img [src]="[videoContainer.image]" class="img-fluid " alt="" style="max-height: 140px;">-->
+        <!--<div class="mask flex-center rgba-red-strong">-->
+          <!--<p class="white-text">Strong overlay</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>
+<!--style="width: 300px; height: 100px;">-->
