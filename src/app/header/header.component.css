@@ -1,0 +1,15 @@
+.row {
+  position: relative;
+}
+
+.bottom-align-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.valignbottom {
+  display: inline-block;
+  vertical-align: bottom;
+  float: none;
+}

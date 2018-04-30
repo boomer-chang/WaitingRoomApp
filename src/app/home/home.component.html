@@ -4,14 +4,14 @@
   </div>
   <div class="row no-gutters">
     <div class="col col-sm-4 col-xs-4"
-         *ngFor="let videoContainer of appConfigService.getVideoCollections()">
+         *ngFor="let videoPage of appConfigService.getVideoPages()">
       <a style="cursor: pointer;"
-          [routerLink]="['../videos', videoContainer.id]"
+          [routerLink]="['../videos', videoPage.id]"
           routerLinkActive="active"
           class="list-group-item clearfix">
         <div class="overlay">
-          <h4 class="list-group-item-heading">{{ videoContainer.name }}</h4>
-          <p class="list-group-item-text">{{ videoContainer.description }}</p>
+          <h4 class="list-group-item-heading">{{ videoPage.name }}</h4>
+          <p class="list-group-item-text">{{ videoPage.description }}</p>
         </div>
       </a>
       <!--<div class="view overlay">-->

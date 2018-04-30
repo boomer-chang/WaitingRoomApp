@@ -1,6 +1,6 @@
 import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import {AppConfigService} from './app-config.service';
@@ -27,6 +27,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   providers: [AppConfigService],

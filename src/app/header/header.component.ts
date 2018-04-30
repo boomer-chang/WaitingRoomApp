@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
           this.description2 = '';
           if (event.url.indexOf('videos') >= 0) {
             const id = event.url.substring(8, event.url.length);
-            const videoCollection = this.appConfigService.getVideoCollection(id);
+            const videoCollection = this.appConfigService.getVideoPage(id);
             this.heading = 'Our ' + videoCollection.name;
             this.description2 = videoCollection.description2;
           }
