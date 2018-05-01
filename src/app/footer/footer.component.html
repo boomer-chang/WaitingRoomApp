@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row no-gutters">
+    <div class="col col-sm-4 col-xs-4"
+         *ngFor="let videoPage of appConfigService.getVideoPages()">
+      <a style="cursor: pointer;"
+         [routerLink]="['../videos', videoPage.id]"
+         routerLinkActive="active"
+         class="list-group-item clearfix">
+        <div class="overlay">
+          <h4 class="list-group-item-heading">{{ videoPage.name }}</h4>
+          <p class="list-group-item-text">{{ videoPage.description }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

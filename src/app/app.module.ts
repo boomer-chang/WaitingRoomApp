@@ -7,9 +7,10 @@ import {AppConfigService} from './app-config.service';
 import { HomeComponent } from './home/home.component';
 import { VideosComponent } from './videos/videos.component';
 import {RouterModule, Routes} from '@angular/router';
-import { SplashComponent } from './splash/splash.component';
 import { SafePipe } from './safe.pipe';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import {UICarouselModule} from 'ui-carousel';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -21,14 +22,15 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     VideosComponent,
-    SplashComponent,
     SafePipe,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    UICarouselModule
   ],
   providers: [AppConfigService],
   bootstrap: [AppComponent]

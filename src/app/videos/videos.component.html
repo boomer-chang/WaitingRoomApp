@@ -1,25 +1,27 @@
-<div class="row">
-  <div class="col col-sm-4 col-xs-4" *ngFor="let video of videoPage.videos">
-    <ng-template #content>
-      <div class="video">
-        <iframe class="embed-responsive-item"
-                width="150%" height="600"
-                [src]="'https://www.youtube.com/embed/' + video.youtubeId | safe"
-                allowfullscreen="true"></iframe>
-      </div>
-    </ng-template>
-    <a style="cursor: pointer;" (click)="openVideo(content)">
-      <!--<div class="container">-->
+<div class="container">
+  <div class="row">
+    <div class="col col-sm-4 col-xs-4" *ngFor="let video of videoPage.videos">
+      <ng-template #content>
+        <div class="video">
+          <iframe class="embed-responsive-item"
+                  width="150%" height="600"
+                  [src]="'https://www.youtube.com/embed/' + video.youtubeId | safe"
+                  allowfullscreen="true"></iframe>
+        </div>
+      </ng-template>
+      <a style="cursor: pointer;" (click)="openVideo(content)" class="clearfix">
+        <!--<div class="container">-->
         <img class="img-fluid z-depth-1"
              [src]="'https://img.youtube.com/vi/' + video.youtubeId + '/mqdefault.jpg' | safe"
-             alt="video"
-             style="min-height: 100%;">
+             alt="video">
         <div class="overlay">
           <div class="text">{{ video.title }}</div>
         </div>
-      <!--</div>-->
-    </a>
-    <br>
-    <br>
+        <!--</div>-->
+      </a>
+      <br>
+      <br>
+    </div>
   </div>
 </div>
+<!--style="min-height: 100%;"-->

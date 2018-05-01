@@ -14,7 +14,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   heading: string;
   description2: string;
 
-  constructor(private router: Router, private appConfigService: AppConfigService) {}
+  constructor(private router: Router,
+              private appConfigService: AppConfigService) {}
 
   ngOnInit() {
     this.subscription = this.router.events.subscribe(
